@@ -22,6 +22,5 @@ https://ithelp.ithome.com.tw/articles/10202121?sc=hot
 
 # 數據資料來源
 https://covid-19.nchc.org.tw/dt_005-covidTable_taiwan.php?language=zh-tw
-# taiwan_covid-19-
-# taiwan_covid-19-
+
 # Taiwan_covid-19
