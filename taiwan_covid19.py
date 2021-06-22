@@ -25,19 +25,13 @@ taiwan = {'NewTaipei': '0',
 r = requests.get("https://covid-19.nchc.org.tw/dt_005-covidTable_taiwan.php?language=en",
                  verify=False)  # 將網頁資料GET下來
 soup = BeautifulSoup(r.text, "html.parser")  # 將網頁資料以html.parser
-# 取HTML標中的 <div class="col-lg-12.main"></div> 中的<span>標籤存入sel
+# 取HTML標中的 <div class="col-lg-12.main a"></div> 中的<span>標籤存入sel
 sel = soup.select("div.col-lg-12.main a")
-a = 0
-for s in sel:
-    print(a)
-    a += 1
-    print(s.text)
-Hsinchu = 0
 
 for s in sel:
     data = s.text.replace("+", " ").replace("\n\xa0",
                                             "").replace("\xa0", " 0").split(" ")
-    print(data)
+    
     if data[0] == 'New':
         taiwan['NewTaipei'] = "+" + data[len(data) - 1]
     if data[0] == 'Taipei':
